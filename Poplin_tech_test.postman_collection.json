@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "e5a8e8c7-c705-48e0-80c6-a93075054eb9",
+		"name": "Poplin_tech_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "115576"
+	},
+	"item": [
+		{
+			"name": "Health server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/health/server",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"health",
+						"server"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health Cache System",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/health/cache-system",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"health",
+						"cache-system"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pokémon by Name",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/pokemon/:name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"pokemon",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "snorlax"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ability by Name",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "123456",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/ability/:name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"ability",
+						":name"
+					],
+					"variable": [
+						{
+							"key": "name",
+							"value": "snorlax"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

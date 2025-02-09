@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  redisCache:
+    image: "redis:7.4"
+    container_name: redisCache
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - '127.0.0.1:6379:6379'
+    command: ["redis-server", "--appendonly", "no"]
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: redis-commander
+    restart: unless-stopped
+    environment:
+      - REDIS_HOSTS=local:redisCache:6379
+    ports:
+      - "127.0.0.1:8081:8081"
+    depends_on:
+      - redisCache
