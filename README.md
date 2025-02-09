@@ -14,7 +14,7 @@
     There is an example `.env.example` file in the root directory.
 5. Run `pnpm build` to create the `dist` folder
 6. Run `pnpm start` to start the server
-7. Start sending requests to `http://localhost:8000` (`port` can be changed in the `.env` file)
+7. Start sending requests to `http://localhost:8000` (`port` can be changed in the `.env` file). You can use [This Postman Collection](./Poplin_tech_test.postman_collection.json)
 8. To shutdown docker containers, run `docker:uninstall`
 
 
@@ -38,7 +38,7 @@ The Poplin Tech Assesment asks to create an API that fetches data from the PokeA
 * **Scalability**
 * **Reliability**
 
-This solution was solved using (`Fastify`)[https://www.fastify.io/] as the web framework and (`Redis`)[https://redis.io/] as the cache system. Docker was used to create a container for Redis and redis-commander. The API is protected by an API key.
+This solution was solved using [`Fastify`](https://www.fastify.io/) as the web framework and [`Redis`](https://redis.io/) as the cache system. Docker was used to create a container for Redis and redis-commander. The API is protected by an API key.
 
 The architecture was defined to be a monolith using a modular approach. The code is divided into modules and each module has its own folder. The main modules are:
 
@@ -48,7 +48,7 @@ The architecture was defined to be a monolith using a modular approach. The code
 
 It was intented that each of the modules could be extracted to a separate repository and be deployed independently with minor changes (creating a new `server.ts` file).
 
-![Architecture](./diagram.png)
+![Architecture](./Diagram.png)
 
 For each of the quality attributes, the following solutions were implemented:
 
